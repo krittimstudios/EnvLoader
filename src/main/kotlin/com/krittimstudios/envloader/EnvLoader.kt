@@ -1,8 +1,12 @@
+package com.krittimstudios.envloader
+
+import java.io.File
+
 object EnvLoader {
     private var env: Map<String, String> = emptyMap()
 
     fun load(path: String = System.getProperty("user.dir") + "/.env"): EnvLoader {
-        val file = java.io.File(path)
+        val file = File(path)
         if (!file.exists()) {
             println("EnvLoader: No .env file found at $path")
             return this
