@@ -26,9 +26,7 @@ java{
 publishing {
     publications {
         create<MavenPublication>("maven") {
-            groupId = "com.krittimstudios"
             artifactId = "envloader"
-            version = "1.0.0"
             from(components["java"])
         }
     }
