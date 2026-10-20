@@ -2,8 +2,7 @@
 
 A lightweight, hassle-free environment variable loader for **Kotlin/JVM** applications. Easily load `.env` configurations into your application with minimal boilerplate code.
 
-[![License: MIT](https://shields.io)](https://opensource.org)
-[![JitPack](https://jitpack.io)](https://jitpack.io)
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
 
 ---
 
@@ -29,7 +28,7 @@ Add the dependency to your application module's `build.gradle.kts`:
 
 ```kotlin
 dependencies {
-    implementation("com.github.krittimstudios:EnvLoader:1.0.0")
+    implementation("com.github.krittimstudios:EnvLoader:1.0.1")
 }
 ```
 
@@ -57,7 +56,7 @@ fun main() {
     EnvLoader.load() 
 
     // Access variables using standard System methods
-    val dbHost = System.getenv("DB_HOST")
+    val dbHost = EnvLoader.require("DB_HOST")
     println("Database Host: \$dbHost")
 }
 ```
